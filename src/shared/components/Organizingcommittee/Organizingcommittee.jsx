@@ -54,16 +54,14 @@ export default function Organizingcommittee() {
         <h3 className="inter-semibold lg:text-[30px] text-[25px] text-center">The Backbone of ICCSCT 2025</h3>
         <div className="xl:max-w-[1450px] md:max-w-[920px] mx-auto mt-3  px-3">
           <p className="inter-regular text-gray-900 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px] mb-10 ">Our Organizing Committee is dedicated to creating an engaging, inclusive, and impactful conference experience for every delegate, speaker, and partner. Through thoughtful planning, meticulous coordination, and a shared commitment to academic excellence, the team ensures that ICCSCT 2025 serves as a dynamic platform for meaningful exchange of ideas, cross-disciplinary collaboration, and global networking.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map(([role, name, position, qualification, location], index) => (
               <div
                 key={index}
                 className="group relative bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.15)] hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               >
-                {/* Gradient Background Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${getRoleColor(role)} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
 
-                {/* Role Badge */}
                 <div className="absolute top-4 right-4 z-10">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${getRoleColor(role)} shadow-md`}>
                     {role}
@@ -71,7 +69,6 @@ export default function Organizingcommittee() {
                 </div>
 
                 <div className="relative p-8">
-                  {/* Profile Image */}
                   <div className="flex justify-center mb-6">
                     <div className="relative">
                       <div className={`absolute inset-0 bg-gradient-to-br ${getRoleColor(role)} rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500`}></div>
@@ -83,12 +80,10 @@ export default function Organizingcommittee() {
                     </div>
                   </div>
 
-                  {/* Name */}
                   <h3 className="text-2xl font-bold text-gray-900 text-center mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {name}
                   </h3>
 
-                  {/* Details */}
                   <div className="space-y-3">
                     <div className="flex items-center text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
                       <FaUser className="w-4 h-4 mr-3 text-blue-500" />
@@ -114,7 +109,7 @@ export default function Organizingcommittee() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -98,14 +98,14 @@ export default function Contactus() {
             <div className="xl:max-w-[1450px]  md:max-w-[920px] px-4 mx-auto mt-8 lg:mt-10 ">
                 <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px] ">Reach out to us via email or phone — we’ll ensure you get the information and support you need to make your participation smooth and rewarding.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 mt-10  max-w-[65rem] mx-auto px-3">
-                    <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-15 mt-10  max-w-[65rem] mx-auto px-3">
+                    {/* <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
                         <div className="bg-white rounded-lg h-full  p-6 relative ">
                             <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><BiSolidPhoneCall className="text-white text-xl lg:text-2xl" /></div>
                             <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">Phone</h3>
                             <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">+91-123-456-7890</p>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
                         <div className="bg-white rounded-lg h-full  p-6 relative ">
                             <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><IoIosMail className="text-white text-xl lg:text-2xl" /></div>
@@ -117,7 +117,7 @@ export default function Contactus() {
                         <div className="bg-white rounded-lg h-full  p-6 relative ">
                             <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><FaLocationDot className="text-white text-xl lg:text-2xl" /></div>
                             <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">Location</h3>
-                            <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Chennai, Tamil Nadu</p>
+                            <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Jurong, Singapore</p>
                         </div>
                     </div>
                 </div>

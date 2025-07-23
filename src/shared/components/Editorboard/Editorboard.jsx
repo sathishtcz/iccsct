@@ -4,9 +4,31 @@ import { Link } from "react-router-dom";
 export default function Editorboard() {
 
     const teamMembers = [
-        ["Manoj Kumar", "University of Wollongong", "UAE"],
-        ["Md Shohel Arman", "Daffodil International University", "Bangladesh"],
-        ["Muhammad Abdul Rehman", "Riphah International University", "Pakistan"],
+        ["Dr.A.  Antonidoss", " Hindustan Institute of Technology", "India"],
+        ["Dr.T. Ananth Kumar", " IFET College of Engineering ", "India"],
+        ["Dr.G.Vinodhini", "Annamalai University", "India"],
+        ["Dr.Ahmed Alkhayyat", " The Islamic university", "Iraq"],
+        ["Dr.Ashok Kumar", " Skyline university", " Nigeria"],
+        ["Dr.Mujtaba Korai", " Gachon University", " South Korea"],
+        ["Dr.Junaid Ahmed", " Zhengzhou University", " China"],
+        ["Dr.K. Nehru", "SNS College of Technology", "India"],
+        ["Dr.A. Gabriel", " Sharda University", "Uzbekistan"],
+        ["Dr.Asad Aziz", "Geography University of Gujarat", "Pakistan"],
+        ["Dr.S. Rathna", "United Institute of Technology", "India"],
+        ["Dr.Saman Almufti", "Nawroz University", "Iraq"],
+        [" Dr.Asma Sbeih", " Palestine Ahliya university", "Palestine"],
+        ["Dr.S. Stewart Kirubakaran", "Karunya Institute of Technology and Sciences", "India"],
+        ["Dr.Twana A. Hamad", " Harran University", "Türkiye"],
+        ["Dr.Zhao Qianyi", " Jinan University", "China"],
+        ["Dr.Nguyen Van Thieu", "PHENIKAA University", "Vietnam"],
+        ["Dr.Asghar Ali Shah", "Bahria university", " Pakistan"],
+        ["Dr.Ammar Amjad", " National Yang ming chiao tung university", "Taiwan"],
+        ["Dr.Førsteamanuensis", " UiT The Arctic University of Norway", "Norway"],
+        ["Dr.Collins N. Udanor", "University of Nigeria", " Nigeria"],
+        ["Dr.Tahir Abbas", " TIMES Institute", " Pakistan"],
+        ["Dr.R. Veerandrakumar", " Panimalar Engineering College", "India"],
+        ["Dr.Sutikno", "University of Diponegoro", " Indonesia"],
+        ["Dr.Hea Choon Ngo", " Universiti Teknikal Malaysia Melaka", " Malaysia"],
     ];
 
     const getRoleColor = (name) => {

@@ -32,7 +32,7 @@ function Homepage() {
                     </Link>
                     <div className="flex items-center gap-1 px-3 py-2 rounded-md border-2 border-white">
                       <IoLocationSharp className="text-white text-2xl" />
-                      <button className="inter-regular md:text-lg text-white">TamilNadu, Chennai</button>
+                      <button className="inter-regular md:text-lg text-white">Jurong, Singapore</button>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ function Homepage() {
 
 
 
-      <div className="px-3 lg:mt-15 mt-10 bg-[#CDF0FE]">
+      {/* <div className="px-3 lg:mt-15 mt-10 bg-[#CDF0FE]">
         <div className="xl:max-w-[1450px]  md:max-w-[920px] mx-auto py-10">
           <div className="flex gap-4 items-center justify-center">
             <img src="/assets/images/star.png" alt="staricon" className="mb-2" />
@@ -222,7 +222,7 @@ function Homepage() {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 

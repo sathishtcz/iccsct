@@ -39,7 +39,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><GrUploadOption className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">August 10, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">June 3, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Abstract Submission Deadline</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><IoNewspaperOutline className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">August 10, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">June 10, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Full Paper Submission Deadline</p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><MdOutlineNotificationsActive className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">September 15, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">June 25, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Notification of Acceptance</p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><IoNewspaperOutline className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">September 30, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">July 3, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Final Paper Submission</p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><TfiWrite className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">September 15, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">July 15, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Registration Deadline</p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Keydates() {
           <div className="bg-gradient-to-b from-[#025DFB] to-[#04C1F3] p-[2px] rounded-lg ">
             <div className="bg-white rounded-lg h-full  p-6 relative ">
               <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><MdDateRange className="text-white text-xl lg:text-2xl" /></div>
-              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">October 24–26, 2025</h3>
+              <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">July 25, 2025</h3>
               <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Conference Dates</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Keydates() {
       </div>
 
 
-      <div className="xl:max-w-[1450px]  md:max-w-[920px] px-4 mx-auto mt-8 lg:mt-10 ">
+      {/* <div className="xl:max-w-[1450px]  md:max-w-[920px] px-4 mx-auto mt-8 lg:mt-10 ">
         <p className="inter-semibold lg:text-[30px] text-[25px]">Registration Details</p>
         <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px] mt-3 ">Join a dynamic community of researchers, technologists, and industry pioneers at ICCSCT 2025. Our seamless registration process secures your spot at one of the leading conferences in computational systems and cloud technologies. </p>
 
@@ -134,7 +134,7 @@ export default function Keydates() {
           </div>
           
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
