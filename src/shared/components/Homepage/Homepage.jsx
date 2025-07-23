@@ -32,7 +32,7 @@ function Homepage() {
                     </Link>
                     <div className="flex items-center gap-1 px-3 py-2 rounded-md border-2 border-white">
                       <IoLocationSharp className="text-white text-2xl" />
-                      <button className="inter-regular md:text-lg text-white">Jurong, Singapore</button>
+                      <button className="inter-regular md:text-lg text-white"> Singapore</button>
                     </div>
                   </div>
                 </div>
