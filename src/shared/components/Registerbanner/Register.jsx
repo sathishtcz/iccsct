@@ -10,7 +10,7 @@ function Register() {
                     <div className="lg:flex justify-between lg:gap-15 ">
                         <div className="flex flex-col">
                             <p className="hanuman-semibold text-white lg:text-[30px] text-[25px]">Ready to Join the Innovation?</p>
-                            <p className="inter-regular text-gray-300 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px] max-w-[60rem]">Register now and secure your spot today to connect with global experts, explore emerging technologies, and be part of shaping the future of computer science.</p>
+                            <p className="inter-regular text-gray-300 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px] max-w-[60rem]">Register now and secure your spot today to connect with global experts, explore emerging technologies, and be part of shaping the future of Computer Science.</p>
                         </div>
                         <div className="flex items-center mt-4 lg:mt-0">
                             <Link to="/about">

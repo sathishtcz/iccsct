@@ -36,7 +36,7 @@ function Aboutus() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 justify-center place-items-center lg:gap-10 gap-10 lg:mt-10 mt-6">
                     <div className="lg:block hidden ">
                         <div>
-                            <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-[580px]' />
+                            <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-[580px]' loading="lazy"/>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ function Aboutus() {
                         <p className="inter-semibold text-[20px] lg:text-[30px] ">Exploring Computational Systems & Cloud Innovation</p>
                         <div className="lg:hidden block mt-5">
                             <div className="flex justify-center">
-                                <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-full max-w-md ' />
+                                <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-full max-w-md ' loading="lazy" />
                             </div>
                         </div>
 

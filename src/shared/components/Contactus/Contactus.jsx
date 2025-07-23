@@ -117,7 +117,7 @@ export default function Contactus() {
                         <div className="bg-white rounded-lg h-full  p-6 relative ">
                             <div className="absolute -top-5 -left-5 bg-gradient-to-b from-[#025DFB] to-[#04C1F3] w-11 h-11 rounded-full flex items-center justify-center text-white text-xl inter-medium"><FaLocationDot className="text-white text-xl lg:text-2xl" /></div>
                             <h3 className="inter-semibold text-lg mb-2 text-gray-900 ">Location</h3>
-                            <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Jurong, Singapore</p>
+                            <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Singapore</p>
                         </div>
                     </div>
                 </div>
