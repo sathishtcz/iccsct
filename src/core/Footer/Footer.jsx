@@ -1,4 +1,3 @@
-import { BiSolidPhoneCall } from 'react-icons/bi';
 import { IoIosMail } from 'react-icons/io';
 import { IoLocationSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#181D8A] text-white  ">
       <div className=" mx-auto px-5 max-w-[92rem]  lg:py-10 py-5">
         <div className="grid grid-cols-1  md:grid-cols-4 sm:grid-cols-2 md:gap-8 gap-4">
-          <div className='text-center md:text-left flex flex-col justify-start items-start'>
+          <div className='text-center md:text-left flex flex-col justify-center items-start'>
             <Link to='/'>
            
               <img className='w-40 md:mx-0 bg-white rounded-md p-1  mx-auto' src="/assets/images/ICCSCT.png" alt="logo" />

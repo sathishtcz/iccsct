@@ -64,12 +64,6 @@ function Aboutus() {
                                     <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px]  ml-[16px]">Addressing advanced computational models, parallel processing, and supercomputing applications.</p>
                                 </div>
                             </div>
-                            <Link to="/about" className=" flex justify-center">
-                                <div className="flex items-center gap-2 group bg-gradient-to-r from-[#025DFB] to-[#04C1F3] cursor-pointer px-3 py-2 rounded-md w-fit  ">
-                                    <button className="inter-medium md:text-lg text-white cursor-pointer">Read More</button>
-                                    <TbCircleArrowRightFilled className="text-white text-2xl transform transition-all duration-300 group-hover:rotate-45" />
-                                </div>
-                            </Link>
                         </div>
                     </div>
                 </div>

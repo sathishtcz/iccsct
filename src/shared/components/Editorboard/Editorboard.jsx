@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function Editorboard() {
 
     const teamMembers = [
-        ["Dr.A.  Antonidoss", " Hindustan Institute of Technology", "India"],
-        ["Dr.T. Ananth Kumar", " IFET College of Engineering ", "India"],
+        
+        
         ["Dr.G. Vinodhini", "Annamalai University", "India"],
         ["Dr. Ahmed Alkhayyat", " The Islamic university", "Iraq"],
         ["Dr. Ashok Kumar", " Skyline university", " Nigeria"],
@@ -21,9 +21,11 @@ export default function Editorboard() {
         ["Dr. Twana A. Hamad", " Harran University", "Türkiye"],
         ["Dr. Zhao Qianyi", " Jinan University", "China"],
         ["Dr. Nguyen Van Thieu", "PHENIKAA University", "Vietnam"],
+        ["Dr.A.  Antonidoss", " Hindustan Institute of Technology", "India"],
         ["Dr. Asghar Ali Shah", "Bahria university", " Pakistan"],
         ["Dr. Ammar Amjad", " National Yang ming chiao tung university", "Taiwan"],
         ["Dr. Førsteamanuensis", " UiT The Arctic University of Norway", "Norway"],
+        ["Dr.T. Ananth Kumar", " IFET College of Engineering ", "India"],
         ["Dr. Collins N. Udanor", "University of Nigeria", " Nigeria"],
         ["Dr. Tahir Abbas", " TIMES Institute", " Pakistan"],
         ["Dr.R. Veerandrakumar", " Panimalar Engineering College", "India"],
