@@ -32,7 +32,7 @@ function Homepage() {
                     </Link>
                     <div className="flex items-center gap-1 px-3 py-2 rounded-md border-2 border-white">
                       <IoLocationSharp className="text-white text-2xl" />
-                      <button className="inter-regular md:text-lg text-white">Singapore</button>
+                      <button className="inter-regular md:text-lg text-white"> Singapore</button>
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,7 @@ function Homepage() {
               <img
                 src="/assets/images/ICCSCThero.png"
                 alt="cloud tech"
-                className="absolute right-0 bottom-32 max-w-[50rem] object-contain"
+                className="absolute right-0 bottom-32 max-w-[50rem] object-contain" loading="lazy"
               />
             </div>
           </div>
@@ -56,17 +56,17 @@ function Homepage() {
       <div className="xl:max-w-[1450px]  md:max-w-[920px] mx-auto px-3 lg:mt-15 mt-10">
         <div className="flex flex-col gap-3 ">
           <div className="flex gap-4 items-center justify-center">
-            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
+            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy" />
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:block hidden">About the Conference</h2>
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:hidden block">About Us</h2>
-            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
+            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy" />
           </div>
           <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">The International Conference on Computational Systems and Cloud Technologies  is a dynamic platform that brings together leading academics, industry professionals, and researchers to exchange the latest advancements in computational systems, cloud computing, and emerging digital infrastructure. This conference aims to foster collaboration, present cutting-edge research, and explore innovative solutions that address real-world challenges in scalable computing, distributed systems, data security, and cloud-native applications.</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center place-items-center lg:gap-10 gap-10 lg:mt-12 mt-6">
           <div className="lg:block hidden ">
             <div>
-              <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-[580px]' loading="lazy" />
+              <img src="/assets/images/About.jpg" alt="Aboutimage" className='w-[580px]' loading="lazy"/>
             </div>
           </div>
 
@@ -111,7 +111,7 @@ function Homepage() {
       <div className="xl:max-w-[1450px]  md:max-w-[920px] mx-auto px-3 lg:mt-15 mt-10">
         <div className="flex flex-col gap-3 ">
           <div className="flex gap-4 items-center justify-center">
-            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
+            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy" />
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:block hidden">Scope of Our Conference</h2>
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:hidden block">Our Scope</h2>
             <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
@@ -154,7 +154,7 @@ function Homepage() {
 
           <div className="lg:block hidden ">
             <div>
-              <img src="/assets/images/Scope.jpg" alt="Aboutimage" className='w-[580px]' loading="lazy"/>
+              <img src="/assets/images/Scope.jpg" alt="Aboutimage" className='w-[580px]' loading="lazy" />
             </div>
           </div>
         </div>
@@ -233,7 +233,7 @@ function Homepage() {
             <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:block hidden">Join Us at ICCSCT 2025</h2>
             <h2 className="text-[#025DFB] lg:text-[28px] text-[25px] hanuman-bold lg:hidden block">ICCSCT 2025</h2>
-            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy"/>
+            <img src="/assets/images/star.png" alt="staricon" className="mb-2" loading="lazy" />
           </div>
           <p className="inter-regular text-gray-700 sm:text-base md:text-lg lg:text-[16px] text-justify leading-[30px]">Be part of the International Conference on Computational Systems and Cloud Technologies and connect with a global community of innovators, researchers, and industry experts. Whether you’re presenting pioneering research, exploring advanced computational models, or discovering the latest in cloud infrastructures, ICCSCT 2025 is your platform to exchange ideas and accelerate progress. Don’t miss this opportunity to expand your network and help shape the future of scalable, intelligent systems.</p>
         </div>
@@ -253,7 +253,7 @@ function Homepage() {
           <div className="bg-[#181D8A] py-5 px-7 border-b-5 border-b-[#04C1F3] rounded-t-full min-w-[134px]  h-full">
             <div className="flex flex-col gap-1 items-center">
               <div className="bg-white rounded-full w-15 h-15  flex items-center justify-center">
-                <img src="/assets/images/stat1.png" alt="stats1" className="flex-shrink-0 w-11" loading="lazy"/>
+                <img src="/assets/images/stat1.png" alt="stats1" className="flex-shrink-0 w-11" loading="lazy" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <p className="inter-semibold text-[28px] text-white text-center">50+</p>
@@ -265,7 +265,7 @@ function Homepage() {
           <div className="bg-[#181D8A] py-5 px-7 border-b-5 border-b-[#04C1F3] rounded-t-full  min-w-[134px] h-full ">
             <div className="flex flex-col gap-1 items-center">
               <div className="bg-white rounded-full w-15 h-15  flex items-center justify-center">
-                <img src="/assets/images/stat1.png" alt="stats1" className="flex-shrink-0 w-11" loading="lazy"/>
+                <img src="/assets/images/stat1.png" alt="stats1" className="flex-shrink-0 w-11" loading="lazy" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <p className="inter-semibold text-[28px] text-white text-center">100+</p>
