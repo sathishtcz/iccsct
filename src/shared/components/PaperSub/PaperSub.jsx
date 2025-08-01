@@ -51,32 +51,66 @@ export default function PaperSub() {
     };
 
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Sending...');
 
+        const journalName = 'iccsct';
+        // Generate unique ID: journalName + YYYYMMDD + HHMMSS
+        const now = new Date();
+        const dateStr = now.toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD
+        const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, ''); // HHMMSS
+        const uniqueId = `${journalName}_${dateStr}_${timeStr}`;
+
         try {
             const formDataToSend = new FormData();
+            formDataToSend.append('Submission_ID', uniqueId);
             formDataToSend.append('Paper_Title', formData.Paper_Title);
             formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
             formDataToSend.append('Email_Address', formData.Email_Address);
             formDataToSend.append('Institution_Name', formData.Institution_Name);
             formDataToSend.append('Paper_Track', formData.Paper_Track);
-            formDataToSend.append('Mobile_Number', formData.Mobile_Number);
-
 
             if (formData.Paper_File) {
                 formDataToSend.append('Paper_File', formData.Paper_File);
             }
 
-            const response = await fetch('http://192.168.1.29/ICCSCT/Iccsct/mail.php', {
+            const googleSheetsParams = new URLSearchParams();
+            googleSheetsParams.append('Submission_ID', uniqueId);
+            googleSheetsParams.append('journal_name', journalName);
+            googleSheetsParams.append('Paper_Title', formData.Paper_Title);
+            googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
+            googleSheetsParams.append('Email_Address', formData.Email_Address);
+            googleSheetsParams.append('Institution_Name', formData.Institution_Name);
+            googleSheetsParams.append('Paper_Track', formData.Paper_Track);
+
+            const mailPromise = fetch('https://iccsct.com/api/mail.php', {
                 method: 'POST',
                 body: formDataToSend,
             });
 
-            if (response.ok) {
-                const result = await response.text();
-                setStatus(result);
+            const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: googleSheetsParams.toString(),
+            });
+
+            const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
+
+            const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
+            const sheetsSuccess = sheetsResponse.status === 'fulfilled';
+
+            if (sheetsResponse.status === 'rejected') {
+                console.error('Sheets request failed:', sheetsResponse.reason);
+            }
+
+            if (mailSuccess && sheetsSuccess) {
+                setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}). Submission ID: ${uniqueId}`);
+
                 setFormData({
                     Paper_Title: '',
                     Author_FUll_Name: '',
@@ -84,20 +118,36 @@ export default function PaperSub() {
                     Institution_Name: '',
                     Paper_Track: '',
                     Paper_File: null,
-                    Mobile_Number: '',
                 });
-                // document.getElementById('Paper_File').value = '';
-                toast.success("Paper submitted successfully!");
+                setFileName('');
+                const fileInput = document.getElementById('Paper_File');
+                if (fileInput) {
+                    fileInput.value = '';
+                } else {
+                    console.error('Element with ID "Paper_File" not found.');
+                }
+                toast.success(`Paper submitted successfully!`);
+
+            } else if (mailSuccess && !sheetsSuccess) {
+                setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
+                toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
+
+            } else if (!mailSuccess && sheetsSuccess) {
+                setStatus('Data likely saved to Google Sheets, but failed to send email.');
+                toast.warning('Data might be saved to Google Sheets, but failed to send email.');
+
             } else {
-                setStatus('Failed to send submission. Please try again.');
-                toast.error('Failed to send submission. Please try again.');
+                setStatus('There might be issues with the submission. Please check manually.');
+                toast.error('Submission completed, but please verify the results manually.');
             }
+
         } catch (error) {
             console.error('Error:', error);
-            setStatus('An error occurred. Please try again.');
+            setStatus('An error occurred during submission. Please try again.');
             toast.error('An error occurred. Please try again.');
         }
-    };
+    }
+
 
     return (
         <>
@@ -249,7 +299,7 @@ export default function PaperSub() {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none  focus:border-[#025DFB]"
                                     />
                                 </div>
-                                <div className="space-y-2">
+                                {/* <div className="space-y-2">
                                     <label for="Mobile_Number" className="block text-sm font-medium text-gray-700">Mobile Number
                                         <span className="text-red-500">*</span>
                                     </label>
@@ -262,7 +312,7 @@ export default function PaperSub() {
                                         placeholder="Enter your Mobile Number"
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none  focus:border-[#025DFB]"
                                     />
-                                </div>
+                                </div> */}
                                 <div className="space-y-2">
                                     <label for="Email_Address" className="block text-sm font-medium text-gray-700">Email
                                         <span className="text-red-500">*</span>
@@ -284,9 +334,17 @@ export default function PaperSub() {
                                     <select name='Paper_Track' value={formData.Paper_Track} onChange={handleFileInputChange}
                                         required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none  focus:border-[#025DFB]">
                                         <option>Select Your Category</option>
-                                        <option>AI</option>
-                                        <option>Machine Learning</option>
-                                        <option>Data Science</option>
+                                        <option>Artificial Intelligence and Machine Learning</option>
+                                        <option>Cloud Computing and Virtualization</option>
+                                        <option>Computational Intelligence</option>
+                                        <option>Big Data Analytics</option>
+                                        <option>Internet of Things (IoT)</option>
+                                        <option>Edge and Fog Computing</option>
+                                        <option>Cybersecurity in Cloud Systems</option>
+                                        <option>High-Performance Computing</option>
+                                        <option>Blockchain for Cloud and Distributed Systems</option>
+                                        <option>Software Engineering for Computational Systems</option>
+
                                     </select>
                                 </div>
                                 <div className="space-y-2 lg:col-span-2">
@@ -295,6 +353,7 @@ export default function PaperSub() {
                                     </label>
                                     <div className="relative w-full px-4 py-6 border border-gray-300 rounded-lg focus:outline-none  focus:border-[#025DFB] flex flex-col items-center justify-center text-center text-gray-500 overflow-hidden cursor-pointer">
                                         <input
+                                            id="Paper_File"
                                             name='Paper_File'
                                             // onChange={handleChange}
                                             accept=".pdf,.doc,.docx"

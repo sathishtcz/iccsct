@@ -9,12 +9,13 @@ import { toast } from "react-toastify";
 
 export default function Contactus() {
 
+
     const [formData, setFormData] = useState({
-        Firstname: '',
-        Lastname: '',
-        Mobile_Number: '',
-        Email_Address: '',
-        Message: '',
+        firstname: '',
+        secondname: '',
+        number: '',
+        email: '',
+        message: '',
     });
     const [status, setStatus] = useState('');
 
@@ -32,39 +33,32 @@ export default function Contactus() {
 
         try {
             const formDataToSend = new FormData();
-            formDataToSend.append('Firstname', formData.Firstname);
-            formDataToSend.append('Lastname', formData.Lastname);
-            formDataToSend.append('Mobile_Number', formData.Mobile_Number);
-            formDataToSend.append('Email_Address', formData.Email_Address);
-            formDataToSend.append('Message', formData.Message);
+            Object.entries(formData).forEach(([key, value]) => {
+                formDataToSend.append(key, value);
+            });
 
-            // if (formData.Paper_File) {
-            //     formDataToSend.append('Paper_File', formData.Paper_File);
-            // }
-
-            const response = await fetch('http://192.168.1.29/ICCSCT/Iccsct/contact.php', {
+            const response = await fetch('https://iccsct.com/api/contact.php', {
                 method: 'POST',
                 body: formDataToSend,
             });
 
+            const result = await response.text();
+            setStatus(result);
+
             if (response.ok) {
-                const result = await response.text();
-                setStatus(result);
+                toast.success("Message submitted successfully!");
                 setFormData({
-                    Firstname: '',
-                    Lastname: '',
-                    Mobile_Number: '',
-                    Email_Address: '',
-                    Message: '',
+                    firstname: '',
+                    secondname: '',
+                    number: '',
+                    email: '',
+                    message: '',
                 });
-                toast.success("Form submitted successfully!");
             } else {
-                setStatus('Failed to send submission. Please try again.');
                 toast.error('Failed to send submission. Please try again.');
             }
         } catch (error) {
             console.error('Error:', error);
-            setStatus('An error occurred. Please try again.');
             toast.error('An error occurred. Please try again.');
         }
     };
@@ -129,39 +123,39 @@ export default function Contactus() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
                                 <div>
                                     <label className="block text-gray-700 text-base font-medium mb-2">First Name  <span className="text-red-500">*</span></label>
-                                    <input type="text" name="Firstname"
+                                    <input type="text" name="firstname"
                                         onChange={handleChange}
-                                        value={formData.Firstname}
+                                        value={formData.firstname}
                                         required className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your first name" />
                                 </div>
                                 <div>
                                     <label className="block text-gray-700 text-base font-medium mb-2">Last Name  <span className="text-red-500">*</span></label>
-                                    <input type="text" name="Lastname"
+                                    <input type="text" name="secondname"
                                         onChange={handleChange}
-                                        value={formData.Lastname}
+                                        value={formData.secondname}
                                         required className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your last name" />
                                 </div>
                             </div>
                             <div>
                                 <label className="block text-gray-700 text-base font-medium mb-2">Email  <span className="text-red-500">*</span></label>
                                 <input type="email" required
-                                    name="Email_Address"
+                                    name="email"
                                     onChange={handleChange}
-                                    value={formData.Email_Address} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your email address" />
+                                    value={formData.email} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your email address" />
                             </div>
                             <div>
                                 <label className="block text-gray-700 text-base font-medium mb-2">Phone No  <span className="text-red-500">*</span></label>
                                 <input type="tel" required
-                                    name="Mobile_Number"
+                                    name="number"
                                     onChange={handleChange}
-                                    value={formData.Mobile_Number} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your phone number" />
+                                    value={formData.number} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB]" placeholder="Your phone number" />
                             </div>
                             <div>
                                 <label className="block text-gray-700 text-base font-medium mb-2">Message  <span className="text-red-500">*</span></label>
                                 <textarea required
-                                    name="Message"
+                                    name="message"
                                     onChange={handleChange}
-                                    value={formData.Message} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB] h-28 " placeholder="Your message here"></textarea>
+                                    value={formData.message} className="w-full p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#025DFB] h-28 " placeholder="Your message here"></textarea>
                             </div>
                             <div className="text-center">
                                 <button type="submit" className="w-fit bg-gradient-to-r from-[#025DFB] to-[#04C1F3] text-white px-3 py-2 rounded-lg  cursor-pointer transition duration-300 inter-semibold">{status === 'Sending...' ? 'Sending...' : 'Send Your Message'}</button>
