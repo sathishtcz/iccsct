@@ -1,8 +1,12 @@
 import React from 'react'
 import Homepage from '../../shared/components/Homepage/Homepage'
+import HelmetComponent from '../HelmetComponent/HelmetComponent'
 
 export default function Home() {
   return (
-    <div><Homepage /></div>
+    <div>
+      <HelmetComponent title={'Home - International Conference on Computational Systems and Cloud Technologies'} canonical={'https://iccsct.com/'} />
+      <Homepage />
+    </div>
   )
 }
